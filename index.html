@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brechó Vintage</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f7f3ef;
+      color:#333;
+    }
+
+    /* HEADER */
+    header{
+      background:#5c3d2e;
+      color:white;
+      padding:20px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    header h1{
+      font-size:30px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      color:#f5c16c;
+    }
+
+    /* HERO */
+    .hero{
+      height:85vh;
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h2{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:22px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#f5c16c;
+      color:#5c3d2e;
+      padding:14px 28px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#ffd98d;
+      transform:scale(1.05);
+    }
+
+    /* PRODUTOS */
+    .produtos{
+      padding:80px 50px;
+      text-align:center;
+    }
+
+    .produtos h2{
+      font-size:40px;
+      margin-bottom:50px;
+      color:#5c3d2e;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+      color:#5c3d2e;
+    }
+
+    .price{
+      color:#c27b00;
+      font-size:22px;
+      font-weight:bold;
+      margin-bottom:15px;
+    }
+
+    /* SOBRE */
+    .sobre{
+      background:#fff;
+      padding:80px 50px;
+      text-align:center;
+    }
+
+    .sobre h2{
+      color:#5c3d2e;
+      margin-bottom:20px;
+      font-size:38px;
+    }
+
+    .sobre p{
+      max-width:800px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#5c3d2e;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* RESPONSIVO */
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .hero-content h2{
+        font-size:38px;
+      }
+
+      .hero-content p{
+        font-size:18px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🧥 Brechó Vintage</h1>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Moda com História</h2>
+
+      <p>Peças únicas, estilos autênticos e sustentabilidade.</p>
+
+      <a href="#" class="btn">Explorar Coleção</a>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="produtos">
+
+    <h2>Destaques do Brechó</h2>
+
+    <div class="cards">
+
+      <!-- CARD 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop" alt="Jaqueta Vintage">
+
+        <div class="card-content">
+          <h3>Jaqueta Vintage</h3>
+
+          <p class="price">R$ 89,90</p>
+
+          <a href="#" class="btn">Comprar</a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop" alt="Vestido Retrô">
+
+        <div class="card-content">
+          <h3>Vestido Retrô</h3>
+
+          <p class="price">R$ 74,90</p>
+
+          <a href="#" class="btn">Comprar</a>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop" alt="Bolsa Clássica">
+
+        <div class="card-content">
+          <h3>Bolsa Clássica</h3>
+
+          <p class="price">R$ 59,90</p>
+
+          <a href="#" class="btn">Comprar</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre">
+
+    <h2>Sobre o Brechó</h2>
+
+    <p>
+      Nosso brechó nasceu da paixão por moda sustentável e peças cheias de personalidade.
+      Aqui você encontra roupas, acessórios e estilos únicos que valorizam a reutilização,
+      o consumo consciente e a autenticidade.
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Brechó Vintage - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
