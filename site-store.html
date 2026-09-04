@@ -43,7 +43,8 @@
       .marca-nome {
         font-size: 22px;
         font-weight: bolder;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #1f2937;
       }
 
       .marca-texto {
@@ -134,17 +135,17 @@
         height: 15px;
         border-radius: 17px;
         padding: 10px;
-        border: 2px solid gray;
+        border: 2px solid #e5e7eb;
       }
 
       .filtros {
+        display: flex;
         background-color: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        padding: 16px;
-        box-shadow: 0 1px 2px #999ea7;
-        border: #999ea7;
+        padding: 14px 32px;
+        margin-bottom: 24px;
+        border-bottom: 2px solid #e5e7eb;
       }
+
       .filtro-botao {
         border: 2px solid #e5e7eb;
         width: 90px;
@@ -154,6 +155,7 @@
         color: #374151;
         margin: 5px;
         text-align: center;
+        cursor: pointer;
       }
 
       .filtro-ativo:active {
@@ -173,7 +175,8 @@
         border: #999ea7;
       }
       .titulo-secao {
-        font-size: 26px;
+        padding: 3px 29px ;
+        font-size: 22px;
         color: #1f2937;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
@@ -181,13 +184,14 @@
       .subtitulo-secao {
         font-family: Arial, Helvetica, sans-serif;
         color: #6b7280;
+        padding: 1px 29px ;
       }
 
       .lista {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
-        font-size: 22px;
+        font-size: 10px;
         padding: 30px;
         width: 180px;
         margin: 5px;
@@ -195,6 +199,9 @@
       }
 
       .card {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
         background-color: #ffffff;
         border: 1px solid #e5e7eb;
         border-radius: 12px;
@@ -215,21 +222,65 @@
       }
 
       .card-tag {
-        font-size: 16px;
+        font-size: 13px;
         background-color: #dcfce7;
         color: #166534;
         width: min-content;
         border-radius: 15px;
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding: 10px;
       }
 
       .card-nome {
-        font-size: 16px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        font-size: 22px;
+        color:#1f2937;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
       }
-    </style>
-  </head>
 
+      .card-descricao{
+        font-size: medium;
+        color:#6b7280;
+        margin-bottom: 14px;
+      }
+
+      .card-preco{
+        font-weight: 500;
+        font-size: 20px;
+        color: #16a34a;
+        margin-left: 2px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+      }
+
+      .card-botao {
+       background-color: #1f2937;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: "Segoe UI", Arial, sans-serif;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    } 
+      .aviso{
+         display:none;
+        background-color: #fff7ed;
+        color: #9a3412;
+        padding: 20px;
+        border: 2px dashed #fdba74;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .card-rodape{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+      }
+
+    </style>
+ 
   <body>
     <header class="topo">
       <div class="topo-linha">
@@ -346,7 +397,7 @@
           <h2 class="card-nome">Smartwatch</h2>
           <p class="card-descricao">Monitore passos, sono e notificações.</p>
           <div class="card-rodape">
-            <span class="card-preco">R$ 349</span>
+            <span class="card-preco filtro-ativo">R$ 349</span>
             <button class="card-botao">Comprar</button>
           </div>
         </article>
