@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundação Sonho Meu - Landing Page</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .body {
+        background-color: white;
+        color: black;
+        font-family: "Manrope", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .hero {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 100vh;
+        padding: 48px 8%;
+        overflow: hidden;
+        color: white;
+      }
+
+      .hero-imagem {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(10, 40, 20, 0.25) 0%,
+          rgba(10, 40, 20, 0.75) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero-marca {
+        position: relative;
+        z-index: 2;
+        font-family: "Playfair Display", serif;
+        font-size: clamp(53px, 7vw, 72px);
+        font-weight: 700;
+        line-height: 1.05;
+        margin-bottom: 16px;
+      }
+
+      .hero-texto {
+        position: relative;
+        z-index: 2;
+        max-width: 520px;
+        font-size: clamp(19px, 9vw, 15px);
+        margin-bottom: 28px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .hero-botao {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        width: fit-content;
+        background-color: #0f7a3a;
+        font-family: "Manrope", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 14px 28px;
+        border: none;
+        border-radius: 8px;
+        color: white;
+      }
+
+      .hero-botao:hover {
+        background-color: #0a4f26;
+        color: aliceblue;
+      }
+
+      .secao-cards {
+        width: min(1100px, 90%);
+        margin: 0 auto;
+        padding: 88px 0 40px;
+      }
+
+      .secao-titulo {
+        font-size: 45px;
+        color: #1a1f16;
+      }
+
+      .secao-subtitulo {
+        font-size: 20px;
+        padding: 12px 0px 40px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #5c6658;
+      }
+
+      .body {
+        background-color: #f7f3eb;
+        color: #1a1f16;
+        font-family: "Manrope", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .grade-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-radius: 30px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        border: none;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 1px 1px 0px #fafafa;
+        border: #999ea7;
+      }
+
+      .card-imagem {
+        width: 340px;
+        height: 200px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+
+      .card-titulo {
+        padding: 12px 11px 12px;
+        font-size: 22px;
+        color: #1a1f16;
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+      .card-texto {
+        padding: 8px 11px 12px;
+        font-size: 18px;
+        color: #5c6658;
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+      .card-corpo {
+        font-size: 18px;
+        padding: 10px 0px 12px;
+        border: 1px solid #ececec;
+        border-end-end-radius: 12px;
+        border-end-start-radius: 12px;
+        background-color: white;
+      }
+
+      .texto-titulo {
+        font-size: 30px;
+        text-align: center;
+      }
+      .texto-explicativo {
+        font-size: 22px;
+        text-align: center;
+      }
+    </style>
+
+    <section class="hero">
+      <img
+        class="hero-imagem"
+        src="https://images.unsplash.com/photo-1503455637927-730bce8583c0?q=80&w=1600"
+        alt="Crianças brincando ao ar livre"
+      />
+      <h1 class="hero-marca">Fundação Sonho Meu</h1>
+      <p class="hero-texto">
+        Educação, cuidado e oportunidades para transformar o futuro de crianças
+        e famílias.
+      </p>
+      <a class="hero-botao" href="#cards">Conhecer projetos</a>
+    </section>
+
+    <section class="secao-cards" id="cards">
+      <h2 class="secao-titulo">O que fazemos</h2>
+      <p class="secao-subtitulo">
+        Conheça as frentes de atuação que sustentam o dia a dia da fundação.
+      </p>
+
+      <div class="grade-cards">
+        <article class="card">
+          <img
+            class="card-imagem"
+            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800"
+            alt="Crianças em atividade educativa"
+          />
+          <div class="card-corpo">
+            <h3 class="card-titulo">Educação</h3>
+            <p class="card-texto">
+              Oficinas, reforço escolar e atividades que estimulam curiosidade e
+              aprendizado.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            class="card-imagem"
+            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800"
+            alt="Voluntários em ação social"
+          />
+          <div class="card-corpo">
+            <h3 class="card-titulo">Comunidade</h3>
+            <p class="card-texto">
+              Ações com famílias e voluntários para fortalecer vínculos e
+              solidariedade.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            class="card-imagem"
+            src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=800"
+            alt="Espaço de convivência e arte"
+          />
+          <div class="card-corpo">
+            <h3 class="card-titulo">Cultura e esporte</h3>
+            <p class="card-texto">
+              Arte, música e esporte como camin0 hos de expressão, saúde e
+              pertencimento.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao-texto" id="sobre">
+      <h2 class="texto-titulo">Por que existimos</h2>
+      <p class="texto-explicativo">
+        A Fundação Sonho Meu nasceu para criar ambientes seguros e acolhedores
+        onde cada criança possa descobrir seu potencial. Acreditamos que o
+        acesso à educação, à cultura e ao cuidado diário abre portas para um
+        futuro com mais dignidade e oportunidades.
+      </p>
+      <p class="texto-explicativo">
+        Com o apoio de educadores, voluntários e parceiros, construímos projetos
+        contínuos que acompanham o desenvolvimento das crianças e fortalecem as
+        famílias ao longo do ano.
+      </p>
+    </section>
+
+    <footer class="rodape">
+      <p>Fundação Sonho Meu &copy; 2026 - Atividade de Landing Page</p>
+    </footer>
+  </body>
+</html>
